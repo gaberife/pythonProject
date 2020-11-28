@@ -29,6 +29,9 @@ def main():
     #result = returnInfo(number)
     #print(result)
     #calculator()
+    #TODO: Reading from files, writing to files, modules & Pip, Classes and Objects, Building a
+    # multiple Choice Quiz, Object Functions, Inheritance, Python Interpreter
+    # Reference Link: https://www.youtube.com/watch?v=rfscVS0vtbw
 
 def translator():
     phrase = input("Type your secret message: ")
