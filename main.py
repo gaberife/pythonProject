@@ -38,7 +38,6 @@ def translator():
             translation = translation + "*"
         else:
             translation = translation + letter
-
     return translation
 
 
@@ -106,8 +105,13 @@ def monthConvert(month):
         "Nov": "November",
         "Dec": "December",
     }
-    #print(conversions[month])
+    #implement except error catch in case program breaks
     print(conversions.get(month, "Not a valid value"))
+    try:
+        print(conversions[month])
+    except:
+        print("Not a valid value (alternate)")
+
 
 def maxNum (num1, num2, num3):
     #Comparison operators
@@ -206,6 +210,7 @@ def calculator():
     num1 = float(input("Type a number: "))
     operator = input("Type a function: ")
     num2 = float(input("Type another number: "))
+    result = "null"
     if operator == "-":
         result = num1 - num2
     elif operator == "+":
@@ -213,7 +218,10 @@ def calculator():
     elif operator == "*":
         result = num1 * num2
     elif operator == "/":
-        result = num1 / num2
+        try:
+            result = num1 / num2
+        except ZeroDivisionError:
+            print("Divided by Zero")
     else:
         result = "You input the wrong function"
 
