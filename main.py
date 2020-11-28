@@ -10,8 +10,15 @@ def main():
     number = 100
     boolean = True
     friends = ["Caleb", "Beck", "Eve", "Anthony", "Madison", "Reid", "Poly"]
-
-    print(maxNum(190,45,67))
+    #print(translator())
+    print()
+    #nestedForLoop(twoDLists())
+    #maxNum(190,45,67)
+    #monthConvert("test")
+    #monthConvert("Apr")
+    #exponentFunct(2,5)
+    #loop()
+    #forLoop(friends)
     #PrintVar()
     #stringVar()
     #userInput()
@@ -23,18 +30,93 @@ def main():
     #print(result)
     #calculator()
 
+def translator():
+    phrase = input("Type your secret message: ")
+    translation = ""
+    for letter in phrase:
+        if letter in "AEIOUaeiou":
+            translation = translation + "*"
+        else:
+            translation = translation + letter
+
+    return translation
+
+
+def twoDLists():
+    numberGrid = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9],
+        [0]
+    ]
+    print("Number at Coordinate 2,1: ", numberGrid[2][1])
+    #print(numberGrid[row][column])
+    return numberGrid
+
+def nestedForLoop(numberGrid):
+    print("The Numbers in the Array")
+    for row in numberGrid:
+        for col in row:
+            print(col, end = ' ')
+        print()
+
+def exponentFunct(base, power):
+    result = 1
+    for index in range(power):
+        result = result * base
+    print(result)
+
+def forLoop(list):
+    print("Letters: ")
+    for letter in "Gabrielle":
+        print(letter)
+        #for every letter in Gabrielle print letter
+    print("Friends: ")
+    for friend in list:
+        print(friend)
+    print("Index: ")
+    for index in range(3,6):
+        print(index)
+    print("Index of Friends")
+    for index in range(2):
+        print(list[index])
+
+
+def loop():
+    i = 1
+    while i <= 10:
+        print(i)
+        i += 1
+    print("Loop is over")
+
+
+def monthConvert(month):
+    #dictionary test that Convert 3 digit month name into full month name
+    conversions = {
+        "Jan": "January",
+        "Feb": "February",
+        "Mar": "March",
+        "Apr": "April",
+        "May": "May",
+        "Jun": "June",
+        "Jul": "July",
+        "Aug": "August",
+        "Sep": "September",
+        "Oct": "October",
+        "Nov": "November",
+        "Dec": "December",
+    }
+    #print(conversions[month])
+    print(conversions.get(month, "Not a valid value"))
+
 def maxNum (num1, num2, num3):
     #Comparison operators
     if num1 >= num2 and num1 >= num3:
-        return num1
+        print(num1)
     elif num2 >= num1 and num2 >= num3:
-        return num2
+        print(num2)
     else:
-        return num3
-
-
-
-
+        print(num3)
 
 def PrintVar():
     print( "\n" + 'Test Case - ' + testInstance)
@@ -118,20 +200,19 @@ def functions(string, number, boolean, friends):
 def returnInfo(num):
     return num - 12
 
-
 def calculator():
     testInstance = "ifStatements"
     print("\n" + 'Test Case - ' + testInstance)
     num1 = float(input("Type a number: "))
-    function = input("Type a function: ")
+    operator = input("Type a function: ")
     num2 = float(input("Type another number: "))
-    if function == "-":
+    if operator == "-":
         result = num1 - num2
-    elif function == "+":
+    elif operator == "+":
         result = num1 + num2
-    elif function == "*":
+    elif operator == "*":
         result = num1 * num2
-    elif function == "/":
+    elif operator == "/":
         result = num1 / num2
     else:
         result = "You input the wrong function"
