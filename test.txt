@@ -1,0 +1,12 @@
+Frodo - Hobbit
+Samweis - Hobbit
+Gandalf - Wizard
+Galadriel - Elf
+Legolas - Elf
+Aragorn - Man
+Borimir - Man
+Merrie - Hobbit
+Pippin - Hobbit
+Arwn - Elf
+Sauran - Wizard
+Treebeard - Ent

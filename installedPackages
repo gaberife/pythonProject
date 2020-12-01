@@ -1,0 +1,16 @@
+Package         Version
+--------------- -------
+DateTime        4.3
+docutils        0.16
+lxml            4.6.2
+numpy           1.19.4
+pandas          1.1.4
+pathlib         1.0.1
+pip             20.3
+python-dateutil 2.8.1
+python-docx     0.8.10
+pytz            2020.4
+scipy           1.5.4
+six             1.15.0
+statistics      1.0.3.5
+zope.interface  5.2.0

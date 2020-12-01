@@ -1,4 +1,8 @@
 from math import*
+import csv
+
+#Modules Practice
+import tools
 
 testInstance = "Print Variable"
 
@@ -6,34 +10,61 @@ def main():
 
     print('Hello World')
     # Global Variables
-    string = "A string of characters"
-    number = 100
-    boolean = True
-    friends = ["Caleb", "Beck", "Eve", "Anthony", "Madison", "Reid", "Poly"]
-    #print(translator())
     print()
+    #writeFiles()
+    #readFile()
+    #print(translator())
     #nestedForLoop(twoDLists())
     #maxNum(190,45,67)
     #monthConvert("test")
     #monthConvert("Apr")
     #exponentFunct(2,5)
     #loop()
-    #forLoop(friends)
+    #forLoop(tools.friends)
     #PrintVar()
     #stringVar()
     #userInput()
-    #Lists(friends)
-    #ListFunctions(friends)
-    #functions(string, number, boolean, friends)
+    #Lists(tools.friends)
+    #ListFunctions(tools.friends)
+    #functions(tools.string, tools.number, tools.boolean, tools.friends)
     #tuple()
-    #result = returnInfo(number)
+    #result = returnInfo(tools.number)
     #print(result)
     #calculator()
-    #TODO: Reading from files, writing to files, modules & Pip, Classes and Objects, Building a
-    # multiple Choice Quiz, Object Functions, Inheritance, Python Interpreter
+    #TODO:Object Functions, Inheritance, Python Interpreter
     # Reference Link: https://www.youtube.com/watch?v=rfscVS0vtbw
 
+
+
+def writeFiles():
+    testInstance = "Writing Files"
+    print( "\n" + 'Test Case - ' + testInstance)
+
+    charactersLOTR = open("LOTR Characters.txt", "w") # "a" = appends
+    test = open("Test.txt", "r")
+    for character in test.readlines(): #puts file in an array
+        charactersLOTR.write(character) #reads lines from array
+    charactersLOTR.close()
+
+def readFile():
+    testInstance = "Reading Files"
+    print( "\n" + 'Test Case - ' + testInstance)
+    charactersLOTR = open("test.txt", "r") #"r" = read
+    print(charactersLOTR.readable())
+
+    arrayLOTR = charactersLOTR.readlines() #creates an array of characters
+    print("Test again: ", arrayLOTR[3])
+
+    for character in arrayLOTR: #puts file in an array
+        print(character) #reads lines from array
+
+    #print(charactersLOTR) #all contents
+    charactersLOTR.close()
+
+
 def translator():
+    testInstance = "Translating secret messages"
+    print( "\n" + 'Test Case - ' + testInstance)
     phrase = input("Type your secret message: ")
     translation = ""
     for letter in phrase:
@@ -45,6 +76,8 @@ def translator():
 
 
 def twoDLists():
+    testInstance = "2D Lists"
+    print( "\n" + 'Test Case - ' + testInstance)
     numberGrid = [
         [1,2,3],
         [4,5,6],
@@ -56,6 +89,8 @@ def twoDLists():
     return numberGrid
 
 def nestedForLoop(numberGrid):
+    testInstance = "Nested For Loop"
+    print( "\n" + 'Test Case - ' + testInstance)
     print("The Numbers in the Array")
     for row in numberGrid:
         for col in row:
@@ -63,12 +98,16 @@ def nestedForLoop(numberGrid):
         print()
 
 def exponentFunct(base, power):
+    testInstance = "Exponent Function"
+    print( "\n" + 'Test Case - ' + testInstance)
     result = 1
     for index in range(power):
         result = result * base
     print(result)
 
 def forLoop(list):
+    testInstance = "For Loop"
+    print( "\n" + 'Test Case - ' + testInstance)
     print("Letters: ")
     for letter in "Gabrielle":
         print(letter)
@@ -85,6 +124,8 @@ def forLoop(list):
 
 
 def loop():
+    testInstance = "Loops"
+    print( "\n" + 'Test Case - ' + testInstance)
     i = 1
     while i <= 10:
         print(i)
@@ -93,6 +134,8 @@ def loop():
 
 
 def monthConvert(month):
+    testInstance = "Keys"
+    print( "\n" + 'Test Case - ' + testInstance)
     #dictionary test that Convert 3 digit month name into full month name
     conversions = {
         "Jan": "January",
@@ -117,6 +160,8 @@ def monthConvert(month):
 
 
 def maxNum (num1, num2, num3):
+    testInstance = "Comparison"
+    print( "\n" + 'Test Case - ' + testInstance)
     #Comparison operators
     if num1 >= num2 and num1 >= num3:
         print(num1)
