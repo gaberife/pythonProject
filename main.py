@@ -31,8 +31,7 @@ def main():
     #result = returnInfo(tools.number)
     #print(result)
     #calculator()
-    #TODO:Object Functions, Inheritance, Python Interpreter
-    # Reference Link: https://www.youtube.com/watch?v=rfscVS0vtbw
+
 
 
 
